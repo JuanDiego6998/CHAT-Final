@@ -30,7 +30,7 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">El arca del gusto</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -45,8 +45,12 @@
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolioSecundarios">Productos secundarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="estudiantes.html.php" >Recetas Estudiantes</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html.php" >Login</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -96,7 +100,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/amaranto.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -106,7 +110,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/abejaand.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -116,7 +120,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/camaron.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -126,7 +130,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/caracha.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -136,7 +140,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/lamellea.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -146,14 +150,57 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/melloco.png" alt="">
                         </a>
                     </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/pato.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/tomate.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/tortuga.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/vainilla.png" alt="">
+                        </a>
+                    </div>
+
                 </div>
 
                 <a class="btn btn-primary btn-xl" href="recetas.php">ver mas</a>';
 
 
+
+                </div>
             </div>
         </section>
 
@@ -171,7 +218,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_1.jpg" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -181,7 +228,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_2.jpg" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -191,7 +238,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_3.jpg" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -201,7 +248,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_4.jpg" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -211,7 +258,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_5.jpg" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -221,7 +268,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/slide_6.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -234,58 +281,19 @@
 
 
         <!-- Footer -->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">2215 John Daniel Drive
-                            <br>Clark, MO 65243</p>
-                    </div>
-                    <div class="col-md-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-google-plus"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <div class="copyright py-4 text-center text-white">
-            <div class="container">
-                <small>Copyright &copy; Your Website 2018</small>
-            </div>
+         <footer class="py-5 bg-dark">
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Alexander Viteri, David Cevallos, Ignacio Vergara, Juan Diego Garzón</p>
         </div>
+        <!-- /.container -->
+    </footer>
+
+   
 
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
         <div class="scroll-to-top d-lg-none position-fixed ">
@@ -561,6 +569,11 @@
                 </div>
             </div>
         </div>
+        
+        <script>
+            
+        </script>
+        
 
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
