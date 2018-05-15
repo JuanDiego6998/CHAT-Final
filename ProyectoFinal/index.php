@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+
+<?php
+
+    session_start();
+
+?>
 <html lang="en">
 
     <head>
@@ -30,7 +35,7 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">El arca del gusto</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -45,8 +50,21 @@
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolioSecundarios">Productos secundarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html.php" >Login</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="estudiantes.html.php" >Recetas Estudiantes</a>
                         </li>
+
+                        <?php
+                if (isset($_SESSION['log_in'])) {
+                    echo '<li class="nav-item mx-0 mx-lg-1">
+                           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="close_session.php" >Log Out</a>
+                        </li>';
+                } else {
+                   echo '<li class="nav-item mx-0 mx-lg-1">
+                           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html.php" >Log In</a>
+                        </li>'; 
+                }
+                ?>
+
                     </ul>
                 </div>
             </div>
@@ -68,6 +86,26 @@
                 <h2 class="text-center text-uppercase text-secondary mb-0">Productos primarios</h2>
                 <br>
                 <br>
+
+                <?php
+                for ($i = 0; $i < 2; $i++) {
+                    echo '<div class="row">';
+                    for ($j = 0; $j < 3; $j++) {
+                        echo '<div class="col-md-6 col-lg-4">
+                                <a class="portfolio-item d-block mx-auto" href="#primarios-modal-' . ($j + 1) . '">
+                                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                                </a>
+                            </div>';
+                    }
+                    echo '</div>';
+                }
+                ?>
+
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <a class="portfolio-item d-block mx-auto" href="#primarios-modal-1">
@@ -76,7 +114,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/amaranto.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -86,7 +124,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/abejaand.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -96,7 +134,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/camaron.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -106,7 +144,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/caracha.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -116,7 +154,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/lamellea.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -126,436 +164,452 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                            <img class="img-fluid" src="img/portfolio/melloco.png" alt="">
                         </a>
                     </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/pato.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/tomate.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/tortuga.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/vainilla.png" alt="">
+                        </a>
+                    </div>
+
                 </div>
-                <a class="btn btn-primary btn-xl" href="recetas.php">ver mas</a>';
+                <?php
+                
+                if (isset($_SESSION['log_in'])) {
+                    echo '
+                           <a class="btn btn-primary btn-xl" href="ingresar_receta.html.php">Ingresar</a>
+                        ';
+                }
+                ?>
 
 
-            </div>
-        </section>
-
-        <!-- Productos secundarios Section -->
-        <section class="portfolio" id="portfolioSecundarios" style="background-color: #6600cc">
-            <div class="container" >
-                <h2 class="text-center text-uppercase text-white mb-0">Productos Secundarios</h2>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-1">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-2">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-4">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-5">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-6">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Contact Section -->
-
-
-        <!-- Footer -->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">2215 John Daniel Drive
-                            <br>Clark, MO 65243</p>
-                    </div>
-                    <div class="col-md-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-google-plus"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                    <i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <div class="copyright py-4 text-center text-white">
-            <div class="container">
-                <small>Copyright &copy; Your Website 2018</small>
             </div>
         </div>
+    </section>
 
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-        <div class="scroll-to-top d-lg-none position-fixed ">
-            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-                <i class="fa fa-chevron-up"></i>
+    <!--Productos secundarios Section -->
+    <section class = "portfolio" id = "portfolioSecundarios" style = "background-color: #6600cc">
+        <div class = "container" >
+            <h2 class = "text-center text-uppercase text-white mb-0">Productos Secundarios</h2>
+            <br>
+            <br>
+            <div class = "row">
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-1">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_1.jpg" alt = "">
+                    </a>
+                </div>
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-2">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_2.jpg" alt = "">
+                    </a>
+                </div>
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-3">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_3.jpg" alt = "">
+                    </a>
+                </div>
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-4">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_4.jpg" alt = "">
+                    </a>
+                </div>
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-5">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_5.jpg" alt = "">
+                    </a>
+                </div>
+                <div class = "col-md-6 col-lg-4">
+                    <a class = "portfolio-item d-block mx-auto" href = "#secundarios-modal-6">
+                        <div class = "portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class = "portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class = "fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class = "img-fluid" src = "img/portfolio/slide_6.jpg" alt = "">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Contact Section -->
+
+
+    <!--Footer -->
+    <footer class = "py-5 bg-dark">
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class = "container">
+            <p class = "m-0 text-center text-white">Copyright &copy;
+                Alexander Viteri, David Cevallos, Ignacio Vergara, Juan Diego Garzón</p>
+        </div>
+        <!--/.container -->
+    </footer>
+
+
+
+    <!--Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class = "scroll-to-top d-lg-none position-fixed ">
+        <a class = "js-scroll-trigger d-block text-center text-white rounded" href = "#page-top">
+            <i class = "fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!--primarios Modals -->
+
+    <!--primarios Modal 1 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-1">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
             </a>
-        </div>
-
-        <!-- primarios Modals -->
-
-        <!-- primarios Modal 1 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-1">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/cabin.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 2 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-2">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 2 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-2">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/cake.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 3 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-3">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 3 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-3">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/circus.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 4 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-4">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 4 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-4">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/game.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 5 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-5">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 5 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-5">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/safe.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 6 -->
-        <div class="portfolio-modal mfp-hide" id="primarios-modal-6">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 6 -->
+    <div class = "portfolio-modal mfp-hide" id = "primarios-modal-6">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/submarine.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Secundarios Modals -->
+    <!--Secundarios Modals -->
 
-        <!-- primarios Modal 1 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-1">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 1 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-1">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/cabin.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 2 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-2">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 2 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-2">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/cake.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 3 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-3">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 3 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-3">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/circus.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 4 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-4">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 4 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-4">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/game.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 5 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-5">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 5 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-5">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/safe.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- primarios Modal 6 -->
-        <div class="portfolio-modal mfp-hide" id="secundarios-modal-6">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
+    <!--primarios Modal 6 -->
+    <div class = "portfolio-modal mfp-hide" id = "secundarios-modal-6">
+        <div class = "portfolio-modal-dialog bg-white">
+            <a class = "close-button d-none d-md-block portfolio-modal-dismiss" href = "#">
+                <i class = "fa fa-3x fa-times"></i>
+            </a>
+            <div class = "container text-center">
+                <div class = "row">
+                    <div class = "col-lg-8 mx-auto">
+                        <h2 class = "text-secondary text-uppercase mb-0">Project Name</h2>
+                        <hr class = "star-dark mb-5">
+                        <img class = "img-fluid mb-5" src = "img/portfolio/submarine.png" alt = "">
+                        <p class = "mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class = "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href = "#">
+                            <i class = "fa fa-close"></i>
+                            Close Project</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
 
-        <!-- Plugin JavaScript -->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    </script>
 
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
 
-        <!-- Custom scripts for this template -->
-        <script src="js/freelancer.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
 
 </html>
