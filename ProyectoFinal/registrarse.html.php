@@ -48,22 +48,70 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section>
+            
+            <div class = "container">
+            <h2 class = "text-center text-uppercase text-secondary mb-0">Registrarse</h2>
+            <div class = "row">
+            <div class = "col-lg-8 mx-auto">
+            <!--To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!--The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <form name = "Login" action = "" method = "POST">
+           <?php
+            if(isset($_POST["user"])){
+            require __DIR__."../registro_baseDatos.php";
+            $test = new insertToDB($conn);
+            $test->Insert([$_POST["user"], $_POST["password"]]);
+            }
+            ?>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <label for="Usuario">Ingresar Usuario</label>
+                    <input class="form-control" name="user" type="text" placeholder="Usuario" required="required" data-validation-required-message="por favor ingresar usuario.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <label>Password</label>
+                    <input class="form-control" name="password" type="password" placeholder="Password" required="required" data-validation-required-message="Please enter your password.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl">registrarse</button>
 
-    </body>
+            </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        </form>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    </div>
+</div>
+</div>
+</section>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/freelancer.min.js"></script>
 </html>
 
