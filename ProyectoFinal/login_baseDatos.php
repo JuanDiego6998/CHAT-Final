@@ -7,7 +7,7 @@ try{
             echo "No conectado".$ex;
         }
  
-if(isset($_POST['userName'])){
+if(isset($_POST['submit'])){
     
     $uname=$_POST['userName'];
     $password=$_POST['password'];
@@ -17,7 +17,7 @@ if(isset($_POST['userName'])){
     $result= $pdo->query($sql);
     
     if($row=$result->fetch()){
-        header('Location: account.html.php'); 
+        header('Location: index.php'); 
     }
     else{
         echo " You Have Entered Incorrect Password";

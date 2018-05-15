@@ -30,7 +30,7 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">El arca del gusto</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -39,16 +39,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="#portfolioPrimarios">Productos Primarios</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolioPrimarios">Productos Primarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="#portfolioSecundarios">Productos secundarios</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolioSecundarios">Productos secundarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="#portfolioPrimarios">Recetas Estudiantes</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="login.html.php" >Login</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html.php" >Login</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +58,7 @@
 
                 <h1 class="text-uppercase mb-0">El arca del gusto</h1>
 
-                <h2 class="font-weight-light mb-0">Patrimonio alimenticio del Ecuador</h2>
+                <h2 class="font-weight-light mb-0">Patrimonio alimenticio del ecuador</h2>
             </div>
         </header>
 
@@ -71,24 +68,71 @@
                 <h2 class="text-center text-uppercase text-secondary mb-0">Productos primarios</h2>
                 <br>
                 <br>
-                    <?php
-                    for ($i = 0; $i < 2; $i++) {
-                        echo '<div class="row">';
-                        for ($j = 0; $j < 3; $j++) {
-                            echo '<div class="col-md-6 col-lg-4">
-                                    <a class="portfolio-item d-block mx-auto" href="#primarios-modal-'.($j+1).'">
-                                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                            <i class="fa fa-search-plus fa-3x"></i>
-                                            </div>
-                                        </div>
-                                        <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-                                    </a>
-                                </div>';
-                        }
-                        echo '</div>';
-                    }
-                    ?>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-1">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-3">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-4">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-5">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#primarios-modal-6">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-xl" href="recetas.php">ver mas</a>';
+
+
             </div>
         </section>
 
@@ -98,24 +142,68 @@
                 <h2 class="text-center text-uppercase text-white mb-0">Productos Secundarios</h2>
                 <br>
                 <br>
-                <?php
-                for($i=0; $i<2; $i++){
-                    echo '<div class="row">';
-                    for($j=0; $j<3; $j++){
-                        echo '<div class="col-md-6 col-lg-4">
-                                <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-'.($j+1).'">
-                                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <i class="fa fa-search-plus fa-3x"></i>
-                                        </div>
-                                    </div>
-                                    <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-                                </a>
-                            </div>';
-                    }
-                    echo '</div>';
-                }            
-                ?>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-1">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-2">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-3">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-4">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-5">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" href="#secundarios-modal-6">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -174,7 +262,7 @@
 
         <div class="copyright py-4 text-center text-white">
             <div class="container">
-                <small>Copyright &copy; USFQ 2018</small>
+                <small>Copyright &copy; Your Website 2018</small>
             </div>
         </div>
 
