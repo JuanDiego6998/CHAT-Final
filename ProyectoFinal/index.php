@@ -290,6 +290,14 @@
                         <img class = "img-fluid" src = "img/portfolio/slide_6.jpg" alt = "">
                     </a>
                 </div>
+                <?php
+                
+                if (isset($_SESSION['log_in'])) {
+                    echo '
+                           <a class="btn btn-primary btn-xl" style="background-color: blue" href="ingresar_receta.html.php">Ingresar</a>
+                        ';
+                }
+                ?>
             </div>
         </div>
     </section>
