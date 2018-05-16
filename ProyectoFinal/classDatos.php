@@ -23,7 +23,7 @@ class Datos {
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img class="img-fluid" src="img/portfolio/amaranto.png" alt="">
+                                    <img class="img-fluid" src="img/portfolio/abejaand.png" alt="">
                                 </a>
                             </div>';
             }
@@ -40,7 +40,8 @@ class Datos {
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
                             <h2 class="text-secondary text-uppercase mb-0">' . $this->aNombrePrimario[$i] . '</h2>
-                            <hr class="star-dark mb-5">
+                            <br>
+                            <br>
                             <img class="img-fluid mb-5" src="img/portfolio/abejaand.png" alt="">
                             <p class="mb-5">' . $this->aDescripcionPrimario[$i] . '</p>
                             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">

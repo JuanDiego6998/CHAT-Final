@@ -53,7 +53,7 @@
             <br>
             <br>
             <div class="container-">
-                <h2 class="text-center text-uppercase text-secondary mb-0">Nueva Rectea</h2>
+                <h2 class="text-center text-uppercase text-secondary mb-0">Nueva Receta</h2>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
