@@ -101,7 +101,7 @@ session_start();
                 
                 if (isset($_SESSION['log_in'])) {
                     echo '
-                           <a class="btn btn-primary btn-xl" style="background-color: blue" href="ingresar_receta.html.php">Ingresar</a>
+                           <a class="btn btn-primary btn-xl" style="background-color: white; color:#6600cc " href="ingresar_receta.html.php">Ingresar</a>
                         ';
                 }
                 ?>
