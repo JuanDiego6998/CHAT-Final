@@ -61,7 +61,8 @@ session_start();
                 $sPrimarioDescripcion = "SELECT priDescripcion FROM primarios";
                 $sSecundarioNombre = "SELECT secNombre FROM secundarios";
                 $sSecundariosDescripcion = "SELECT secDescripcion FROM secundarios";
-                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion);
+                $sImagenes = "SELECT imgURL FROM imagenes";
+                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenes);
                 $imprimirDatos->ImprimirThumbnails($sPrimarios);
 
                 ?>
