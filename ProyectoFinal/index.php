@@ -63,6 +63,7 @@ session_start();
                 $sSecundariosDescripcion = "SELECT secDescripcion FROM secundarios";
                 $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion);
                 $imprimirDatos->ImprimirThumbnails($sPrimarios);
+
                 ?>
 
 
@@ -91,7 +92,10 @@ session_start();
                 ?>
 
             </div>
-                        <?php
+
+
+                <?php
+
                 
                 if (isset($_SESSION['log_in'])) {
                     echo '
@@ -99,6 +103,7 @@ session_start();
                         ';
                 }
                 ?>
+
         </div>
     </section>
 
