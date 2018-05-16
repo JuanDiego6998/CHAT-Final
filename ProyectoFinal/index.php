@@ -61,9 +61,10 @@ session_start();
                 $sPrimarioDescripcion = "SELECT priDescripcion FROM primarios";
                 $sSecundarioNombre = "SELECT secNombre FROM secundarios";
                 $sSecundariosDescripcion = "SELECT secDescripcion FROM secundarios";
-                $sImagenes = "SELECT imgURL FROM imagenes";
-                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenes);
-                $imprimirDatos->ImprimirThumbnails($sPrimarios);
+                $sImagenesPrimarias = "SELECT imgURL FROM imagenes WHERE imgRef=1";
+                $sImagenesSecundarias = "SELECT imgURL FROM imagenes WHERE imgRef=2";
+                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenesPrimarias, $sSecundarioNombre, $sSecundariosDescripcion, $sImagenesSecundarias);
+                $imprimirDatos->ImprimirThumbnailsPrimarios($sPrimarios);
 
                 ?>
 
@@ -89,7 +90,7 @@ session_start();
             <br>
             <br>
             <?php
-                $imprimirDatos->ImprimirThumbnails($sSecundarios)
+                $imprimirDatos->ImprimirThumbnailsSecundarios($sSecundarios)
                 ?>
 
             </div>
@@ -138,12 +139,12 @@ session_start();
 
     <!-- Primarios Modals -->
     <?php
-        $imprimirDatos->ImprimirModals($sPrimarios);
+        $imprimirDatos->ImprimirModalsPrimarios($sPrimarios);
         ?>
 
         <!-- Secundarios Modals -->
         <?php
-        $imprimirDatos->ImprimirModals($sSecundarios);
+        $imprimirDatos->ImprimirModalsSecundarios($sSecundarios);
         ?>
 
     <!-- Bootstrap core JavaScript -->
