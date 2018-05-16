@@ -61,12 +61,12 @@
                         <form name="Registro"  action="" method="POST">
                             <?php
                             require __DIR__ . "../registro_baseDatos.php";
-                            if(isset($_POST["registrarse"])){
-                            $test = new insertToDB($conn);
-                            $test->Insert($_POST["userName"],$_POST["password"]);
+                            if (isset($_POST["registrarse"])) {
+                                $test = new insertToDB($conn);
+                                $test->Insert($_POST["userName"], $_POST["password"], $_POST["status"] );
                             }
                             ?>
-                                    
+
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label for="userName">Ingresar Usuario</label>
@@ -78,9 +78,22 @@
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Password</label>
                                     <input class="form-control" name="password" type="password" placeholder="Password" required="required" data-validation-required-message="Please enter your password.">
-                                    <p class="help-block text-danger"></p>
+
                                 </div>
                             </div>
+
+                            <div class ="control-group">
+                                <br>
+                               
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="status" value="0">Profesor</label>
+                                </div>
+                                <br>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="status" value="1">Estudiante</label>
+                                </div>
+                            </div>
+
                             <br>
                             <div id="success"></div>
                             <div class="form-group">
