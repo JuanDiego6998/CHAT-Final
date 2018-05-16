@@ -10,16 +10,16 @@ class insertToDB {
         $this->conn = $conn;
     }
 //funcion para insertar datos a una tabla, la cual recibe 3 parametro, 2 de ellos arreglas para despues especificar los campos
-    function Insert(array $ingreso) {
+    function Insert($usuario, $password) {
 // sentencia sql que ejecuta el comando para ingresar los valores deseados, en la tabla seleccionada a las columnas seleccionadas a traves de variables cuando la funcion sea instanciada
         $sql = "INSERT INTO usuarios " . "(userName".',' ."userPass)
-        VALUES ( " ."'". $ingreso [0]."'" . ','   ."'".$ingreso [1] ."'". ")";
+        VALUES ( " ."'". $usuario."'" . ','   ."'".$password ."'". ")";
 // condicion para verificar si es que los valores se ingresaron a la tabla
         if ($this->conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {
             echo"<br>";
-            echo "Error: ese usuario ya existe " ;
+           echo "Error: " . $sql . "<br>" . $this->conn->error;
         }
     }
 }
