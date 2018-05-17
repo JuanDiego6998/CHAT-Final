@@ -45,17 +45,17 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.php">Productos Primarios</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="index.php">Productos Primarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.php">Productos secundarios</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="estudiantes.html.php" >Recetas Estudiantes</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="estudiantes.html.php" >Recetas Estudiantes</a>
                         </li>
 
                         <?php
-                        if (isset($_SESSION['log_in'])) {
+                        if (isset($_SESSION['log_in']) || isset($_SESSION["log_inEstud"])) {
                             echo '<li class="nav-item mx-0 mx-lg-1">
                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="close_session.php" >Log Out</a>
                         </li>';
@@ -80,7 +80,7 @@ session_start();
         <div class="container">
 
             <!-- Page Heading -->
-            <h1 class="my-4">Recetas de Alumnos
+            <h1 class="my-4">Productos Primarios
             </h1>
             <?php
             $sPrimarios = "primarios";

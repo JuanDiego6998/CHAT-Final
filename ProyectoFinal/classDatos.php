@@ -1,11 +1,6 @@
 <?php
 
-try {
-    $pdo = new PDO('mysql:host=localhost; dbname=chat; charset=utf8', 'chatAdmin', 'chat1234'); // conecccion a la base de datos, llamada chat bajo las credenciales especificadas
-    //echo "Conectado";
-} catch (Exception $ex) {
-    echo "No conectado" . $ex;
-}
+require_once __DIR__. "../conexion.php";
 
 class Datos {
 
@@ -21,7 +16,7 @@ class Datos {
 
     public function ImprimirThumbnailsPrimarios($sSeccion) {
         echo '<div class="row">';
-        if (sizeof($this->aNombrePrimario) <= 6) {
+        if (sizeof($this->aNombrePrimario) <= 2) {
             for ($i = 0; $i < sizeof($this->aNombrePrimario); $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
@@ -49,12 +44,13 @@ class Datos {
                                 </a>
                             </div>';
             }
+            echo '<a class="btn btn-primary btn-xl text-center "  href="primarios.html.php">Ver Mas</a>';
         }
     }
 
     public function ImprimirThumbnailsSecundarios($sSeccion) {
         echo '<div class="row">';
-        if (sizeof($this->aNombreSecundario) <= 6) {
+        if (sizeof($this->aNombreSecundario) <= 2) {
             for ($i = 0; $i < sizeof($this->aNombreSecundario); $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
@@ -80,6 +76,7 @@ class Datos {
                                 </a>
                             </div>';
             }
+            echo '<a class="btn btn-primary btn-xl text-center " style="background-color: white; color:#6600cc "  href="secundarios.html.php">Ver Mas</a>';
         }
     }
 

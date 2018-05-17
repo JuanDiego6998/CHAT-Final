@@ -58,18 +58,23 @@
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                         <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                        <form name="Registro"  action="" method="POST">
+                        <form name="Registro"  action="" method="POST" enctype="multipart/form-data">
                             <?php
                             require __DIR__ . "../ingresoPrimario_baseDatos.php";
+                            $iRef = 2;
+                            $secundariosNombre = "secNombre";
+                            $secundariosDescripcion = "secDescripcion";
+                            $tabla = "secundarios";
                             if(isset($_POST["ingresar"])){
                             $test = new insertToDB($pdo);
-                            $test->Insert($_POST["nombre"],$_POST["descripcion"]);
+                            $test->Insert($_POST["nombre"],$_POST["descripcion"], $secundariosNombre, $secundariosDescripcion, $tabla);
+                            $test->InsertURL($sNombreFoto, $iRef);
                             }
                             ?>
                                     
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label for="userName">Ingresar Usuario</label>
+                                    <label for="userName">Ingresar Nombre</label>
                                     <input class="form-control" name="nombre" type="text" placeholder="Nombre: Receta" required="required" data-validation-required-message="por favor ingresar Nombre de la receta.">
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -80,6 +85,10 @@
                                     <input class="form-control" name="descripcion" type="Descripcion" placeholder="Descripcion" required="required" data-validation-required-message="Por favor ingresar descripcion.">
                                     <p class="help-block text-danger"></p>
                                 </div>
+                            </div>
+                            <div class="control-group">
+                                Select image to upload:
+                                <input type="file" name="file" id="fileToUpload">
                             </div>
                             <br>
                             <div id="success"></div>

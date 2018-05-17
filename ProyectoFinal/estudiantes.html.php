@@ -55,7 +55,7 @@ session_start();
                         </li>
 
                         <?php
-                        if (isset($_SESSION['log_in'])) {
+                        if (isset($_SESSION['log_in']) || isset($_SESSION["log_inEstud"])) {
                             echo '<li class="nav-item mx-0 mx-lg-1">
                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="close_session.php" >Log Out</a>
                         </li>';
@@ -100,7 +100,13 @@ session_start();
             ?>
         </div>
         <!-- /.row -->
-
+        <?php
+        if (isset($_SESSION['log_in']) || isset($_SESSION['log_inEstud'])) {
+                    echo '
+                           <a class="btn btn-primary btn-xl" href="ingresar_estudiantes.html.php">Ingresar</a>
+                        ';
+                }
+                ?>
     </div>
     <!-- /.container -->
     <br>
