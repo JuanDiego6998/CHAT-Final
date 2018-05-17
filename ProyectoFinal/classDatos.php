@@ -16,7 +16,7 @@ class Datos {
 
     public function ImprimirThumbnailsPrimarios($sSeccion) {
         echo '<div class="row">';
-        if (sizeof($this->aNombrePrimario) <= 2) {
+        if (sizeof($this->aNombrePrimario) <= 6) {
             for ($i = 0; $i < sizeof($this->aNombrePrimario); $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
@@ -50,7 +50,7 @@ class Datos {
 
     public function ImprimirThumbnailsSecundarios($sSeccion) {
         echo '<div class="row">';
-        if (sizeof($this->aNombreSecundario) <= 2) {
+        if (sizeof($this->aNombreSecundario) <= 6) {
             for ($i = 0; $i < sizeof($this->aNombreSecundario); $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
