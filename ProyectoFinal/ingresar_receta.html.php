@@ -62,7 +62,7 @@
                             <?php
                             require __DIR__ . "../ingresoPrimario_baseDatos.php";
                             if(isset($_POST["ingresar"])){
-                            $test = new insertToDB($conn);
+                            $test = new insertToDB($pdo);
                             $test->Insert($_POST["nombre"],$_POST["descripcion"]);
                             }
                             ?>
