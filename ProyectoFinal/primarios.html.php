@@ -96,7 +96,7 @@ session_start();
             $sEstudiantesDescripcion = "SELECT estDescripcion FROM estudiantes";
             $sImagenesEstudiantes = "SELECT imgURL FROM imagenes WHERE imgRef=3";
             $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenesPrimarias, $sSecundarioNombre, $sSecundariosDescripcion, $sImagenesSecundarias, $sEstudiantesNombre, $sEstudiantesDescripcion, $sImagenesEstudiantes);
-            $imprimirDatos->ImprimirEstudiantes();
+            $imprimirDatos->ImprimirPrimarios();
             ?>
         </div>
         <!-- /.row -->
@@ -121,3 +121,5 @@ session_start();
 </body>
 
 </html>
+
+

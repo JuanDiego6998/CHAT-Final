@@ -63,7 +63,10 @@ session_start();
                 $sSecundariosDescripcion = "SELECT secDescripcion FROM secundarios";
                 $sImagenesPrimarias = "SELECT imgURL FROM imagenes WHERE imgRef=1";
                 $sImagenesSecundarias = "SELECT imgURL FROM imagenes WHERE imgRef=2";
-                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenesPrimarias, $sSecundarioNombre, $sSecundariosDescripcion, $sImagenesSecundarias);
+                $sEstudiantesNombre = "SELECT estNombre FROM estudiantes";
+                $sEstudiantesDescripcion = "SELECT estDescripcion FROM estudiantes";
+                $sImagenesEstudiantes = "SELECT imgURL FROM imagenes WHERE imgRef=3";
+                $imprimirDatos->SeleccionTabla($pdo, $sPrimarioNombre, $sPrimarioDescripcion, $sImagenesPrimarias, $sSecundarioNombre, $sSecundariosDescripcion, $sImagenesSecundarias, $sEstudiantesNombre, $sEstudiantesDescripcion, $sImagenesEstudiantes);
                 $imprimirDatos->ImprimirThumbnailsPrimarios($sPrimarios);
 
                 ?>
@@ -116,11 +119,6 @@ session_start();
 
     <!--Footer -->
     <footer class = "py-5 bg-dark">
-        <br>
-        <br>
-        <br>
-        <br>
-
         <div class = "container">
             <p class = "m-0 text-center text-white">Copyright &copy;
                 Alexander Viteri, David Cevallos, Ignacio Vergara, Juan Diego Garzón</p>
