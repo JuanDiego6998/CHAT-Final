@@ -62,7 +62,7 @@
                             <?php
                             require __DIR__ . "../registro_baseDatos.php";
                             if (isset($_POST["registrarse"])) {
-                                $test = new insertToDB($conn);
+                                $test = new insertToDB($pdo);
                                 $test->Insert($_POST["userName"], $_POST["password"], $_POST["status"] );
                             }
                             ?>
