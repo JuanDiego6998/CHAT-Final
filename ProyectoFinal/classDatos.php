@@ -14,7 +14,10 @@ class Datos {
             $aNombrePrimario = array(),
             $aNombreSecundario = array(),
             $aDescripcionPrimario = array(),
-            $aDescripcionSecundario = array();
+            $aDescripcionSecundario = array(),
+            $aNombreEstudiantes = array(),
+            $aDescripcionEstudiantes = array(),
+            $aImagenesEstudiantes = array();
 
     public function ImprimirThumbnailsPrimarios($sSeccion) {
         echo '<div class="row">';
@@ -33,7 +36,7 @@ class Datos {
                                 </a>
                             </div>';
             }
-        }else{
+        } else {
             for ($i = 0; $i < 6; $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
@@ -48,7 +51,7 @@ class Datos {
             }
         }
     }
-    
+
     public function ImprimirThumbnailsSecundarios($sSeccion) {
         echo '<div class="row">';
         if (sizeof($this->aNombreSecundario) <= 6) {
@@ -64,7 +67,7 @@ class Datos {
                                 </a>
                             </div>';
             }
-        }else{
+        } else {
             for ($i = 0; $i < 6; $i++) {
                 echo '<div class="col-md-6 col-lg-4">
                                 <a class="portfolio-item d-block mx-auto" href="#' . $sSeccion . '-modal-' . ($i + 1) . '">
@@ -107,7 +110,7 @@ class Datos {
         </div>';
         }
     }
-    
+
     public function ImprimirModalsSecundarios($Seccion) {
         for ($i = 0; $i < sizeof($this->aNombreSecundario); $i++) {
             echo '<div class="portfolio-modal mfp-hide" id="' . $Seccion . '-modal-' . ($i + 1) . '">
@@ -133,13 +136,64 @@ class Datos {
         }
     }
 
-    public function SeleccionTabla($pdo, $sPrimariosNombre, $sPrimariosDescripcion, $sImagenesPrimarias, $sSecundariosNombre, $sSecundariosDescripcion, $sImagenesSecundarias) {
+    public function ImprimirPrimarios() {
+        echo '<div class="row">';
+        for ($i = 0; $i < sizeof($this->aNombrePrimario); $i++) {
+            echo '<div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                    <img class="card-img-top" src="'. $this->aImagenesPrimarias[$i] . '"alt="">
+                        <div class="card-body">
+                        <h4 class="card-title">'. $this->aNombrePrimario[$i] . '
+                        </h4>
+                        <p class="card-text">'. $this->aDescripcionPrimario[$i] .'</p>
+                        </div>
+                    </div>
+                </div>';
+        }
+    }
+    
+    public function ImprimirSecundarios(){
+        echo '<div class="row">';
+        for ($i = 0; $i < sizeof($this->aNombreSecundario); $i++) {
+            echo '<div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                    <img class="card-img-top" src="'. $this->aImagenesSecundarias[$i] . '"alt="">
+                        <div class="card-body">
+                        <h4 class="card-title">'. $this->aNombreSecundario[$i] . '
+                        </h4>
+                        <p class="card-text">'. $this->aDescripcionSecundario[$i] .'</p>
+                        </div>
+                    </div>
+                </div>';
+        }
+    }
+    
+    public function ImprimirEstudiantes(){
+        echo '<div class="row">';
+        for ($i = 0; $i < sizeof($this->aNombreEstudiantes); $i++) {
+            echo '<div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                    <img class="card-img-top" src="'. $this->aImagenesEstudiantes[$i] . '"alt="">
+                        <div class="card-body">
+                        <h4 class="card-title">'. $this->aNombreEstudiantes[$i] . '
+                        </h4>
+                        <p class="card-text">'. $this->aDescripcionEstudiantes[$i] .'</p>
+                        </div>
+                    </div>
+                </div>';
+        }
+    }
+
+    public function SeleccionTabla($pdo, $sPrimariosNombre, $sPrimariosDescripcion, $sImagenesPrimarias, $sSecundariosNombre, $sSecundariosDescripcion, $sImagenesSecundarias, $sNombreEstudiantes, $sDescripcionEstudiantes, $sImagenesEstudiantes) {
         $this->aNombrePrimario = $pdo->query($sPrimariosNombre)->fetchAll(PDO::FETCH_COLUMN);
         $this->aDescripcionPrimario = $pdo->query($sPrimariosDescripcion)->fetchAll(PDO::FETCH_COLUMN);
         $this->aImagenesPrimarias = $pdo->query($sImagenesPrimarias)->fetchAll(PDO::FETCH_COLUMN);
         $this->aNombreSecundario = $pdo->query($sSecundariosNombre)->fetchAll(PDO::FETCH_COLUMN);
         $this->aDescripcionSecundario = $pdo->query($sSecundariosDescripcion)->fetchAll(PDO::FETCH_COLUMN);
         $this->aImagenesSecundarias = $pdo->query($sImagenesSecundarias)->fetchAll(PDO::FETCH_COLUMN);
+        $this->aNombreEstudiantes = $pdo->query($sNombreEstudiantes)->fetchAll(PDO::FETCH_COLUMN);
+        $this->aDescripcionEstudiantes = $pdo->query($sDescripcionEstudiantes)->fetchAll(PDO::FETCH_COLUMN);
+        $this->aImagenesEstudiantes = $pdo->query($sImagenesEstudiantes)->fetchAll(PDO::FETCH_COLUMN);
     }
 
 }
