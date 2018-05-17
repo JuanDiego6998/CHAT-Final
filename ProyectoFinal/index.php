@@ -28,6 +28,7 @@ session_start();
         <link href="css/freelancer.min.css" rel="stylesheet">
         <?php
         require_once __DIR__ . "../classDatos.php";
+        require_once __DIR__. "../conexion.php";
         ?>
     </head>
 
@@ -70,16 +71,13 @@ session_start();
                 $imprimirDatos->ImprimirThumbnailsPrimarios($sPrimarios);
 
                 ?>
-
-
-
             </div>
             
                 <?php
                 
                 if (isset($_SESSION['log_in'])) {
                     echo '
-                           <a class="btn btn-primary btn-xl" href="ingresar_receta.html.php">Ingresar</a>
+                           <a class="btn btn-primary btn-xl" href="ingresar_primarios.html.php">Ingresar</a>
                         ';
                 }
                 ?>
@@ -104,7 +102,7 @@ session_start();
                 
                 if (isset($_SESSION['log_in'])) {
                     echo '
-                           <a class="btn btn-primary btn-xl" style="background-color: white; color:#6600cc " href="ingresar_receta.html.php">Ingresar</a>
+                           <a class="btn btn-primary btn-xl" style="background-color: white; color:#6600cc " href="ingresar_secundarios.html.php">Ingresar</a>
                         ';
                 }
                 ?>
